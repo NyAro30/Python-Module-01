@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+
+class Plant:
+    def __init__(self, name: str, height: int, age: int):
+        self.name = name.capitalize()
+        self.height = height
+        self.age = age
+
+    def show(self):
+        if (self.age == 0 or self.age == 1):
+            print(f"{self.name}: {self.height}cm, {self.age} day old")
+        else:
+            print(f"{self.name}: {self.height}cm, {self.age} days old")
+
+
+if __name__ == "__main__":
+    print("=== Garden Plant Registry ===")
+    p1 = Plant("rose", 25, 30)
+    p2 = Plant("sunflower", 80, 45)
+    p3 = Plant("cactus", 15, 120)
+    p1.show()
+    p2.show()
+    p3.show()
